@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0B3A6E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Prep-Rashan | Daily Current Affairs for UPSC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    img, video { max-width: 100%; height: auto; display: block; }
+    /* Logo palette: Navy #0B3A6E | Red #E11D2E | Teal #0D9B8A */
+    .gradient-bg {
+      background: linear-gradient(135deg, #0B3A6E 0%, #0D4F8B 45%, #0D9B8A 100%);
+    }
+    .gradient-hero {
+      background: linear-gradient(160deg, #072A52 0%, #0B3A6E 28%, #0D6B7A 58%, #0D9B8A 82%, #14B8A6 100%);
+    }
+    .card-hover {
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .card-hover:hover {
+        transform: translateY(-6px) scale(1.01);
+        box-shadow: 0 20px 40px -12px rgb(11 58 110 / 0.22);
+      }
+    }
+    .modal {
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (min-width: 640px) {
+      .modal { align-items: center; padding: 1rem; }
+    }
+    .modal.active { display: flex; }
+    .modal > div {
+      max-height: min(92vh, 100%);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+    }
+    @media (min-width: 640px) {
+      .modal > div {
+        width: auto;
+        max-width: 28rem;
+        border-radius: 1rem;
+      }
+      .modal > div.max-w-md { max-width: 28rem; }
+      .modal > div.max-w-lg { max-width: 32rem; }
+      .modal > div.max-w-sm { max-width: 24rem; }
+    }
+    .admin-only { display: none !important; }
+    body.admin-mode .admin-only { display: block !important; }
+    body.admin-mode .admin-only.flex { display: flex !important; }
+    body.admin-mode { padding-bottom: 8rem; }
+    .qr-img { width: 110px; height: 110px; object-fit: contain; }
+    @media (min-width: 640px) {
+      .qr-img { width: 130px; height: 130px; }
+    }
+    .glow-btn {
+      box-shadow: 0 0 20px rgba(13, 155, 138, 0.45);
+    }
+    @media (hover: hover) {
+      .glow-btn:hover {
+        box-shadow: 0 0 30px rgba(13, 155, 138, 0.65);
+      }
+    }
+    .section-title {
+      background: linear-gradient(90deg, #0B3A6E, #0D9B8A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .period-btn {
+      min-height: 42px;
+      touch-action: manipulation;
+    }
+    .period-btn.active {
+      background: #0B3A6E;
+      color: white;
+      border-color: #0B3A6E;
+      box-shadow: 0 4px 14px rgba(11, 58, 110, 0.4);
+    }
+    .logo-clean {
+      background: white;
+      border-radius: 12px;
+      padding: 6px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+    }
+    /* Touch-friendly controls */
+    button, a, input, select {
+      touch-action: manipulation;
+    }
+    input, select, textarea {
+      font-size: 16px !important; /* prevents iOS zoom on focus */
+    }
+    /* Sticky header safe area (notch) */
+    header.sticky {
+      padding-top: env(safe-area-inset-top);
+    }
+    /* Admin panel: don't cover content on small screens */
+    #adminPanel {
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      right: max(0.75rem, env(safe-area-inset-right));
+      left: auto;
+      max-width: calc(100vw - 1.5rem);
+    }
+    @media (max-width: 640px) {
+      #adminPanel {
+        right: 0.5rem;
+        left: 0.5rem;
+        max-width: none;
+      }
+      #adminPanel > div {
+        width: 100% !important;
+      }
+      .card-hover:active {
+        transform: scale(0.98);
+      }
+    }
+    /* Nav scroll on very small screens */
+    .nav-scroll {
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      justify-content: center;
+    }
+    .nav-scroll::-webkit-scrollbar { display: none; }
+    video {
+      background: #0B3A6E;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Header -->
+  <header class="gradient-bg text-white shadow-xl sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
+      <div class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-center sm:justify-start">
+        <div class="logo-clean w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center overflow-hidden">
+          <img src="prep-rashan-logo.jpeg" alt="Prep-Rashan Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="min-w-0 text-center sm:text-left">
+          <h1 class="text-lg sm:text-xl md:text-2xl font-extrabold tracking-tight leading-tight truncate">Prep-Rashan</h1>
+          <p class="text-[10px] sm:text-xs md:text-sm text-cyan-100 font-medium truncate">Prep-Rashan Tutorial • UPSC Current Affairs</p>
+        </div>
+      </div>
+      <nav class="nav-scroll flex flex-nowrap sm:flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium w-full sm:w-auto pb-0.5">
+        <a href="#home" class="px-2.5 sm:px-3 py-2 rounded-lg hover:bg-white/15 transition whitespace-nowrap">Home</a>
+        <a href="#content" class="px-2.5 sm:px-3 py-2 rounded-lg hover:bg-white/15 transition whitespace-nowrap">Content</a>
+        <a href="#social" class="px-2.5 sm:px-3 py-2 rounded-lg hover:bg-white/15 transition whitespace-nowrap">Connect</a>
+        <a href="#contact" class="px-2.5 sm:px-3 py-2 rounded-lg hover:bg-white/15 transition whitespace-nowrap">Contact</a>
+        <button id="memberLoginBtn" class="bg-white/20 hover:bg-white/30 px-2.5 sm:px-3 py-2 rounded-lg transition text-[11px] sm:text-xs font-semibold border border-white/30 whitespace-nowrap">
+          <i class="fas fa-user-check mr-1"></i> <span id="memberBtnText">Member</span>
+        </button>
+        <button id="adminLoginBtn" class="bg-white/20 hover:bg-white/30 px-2.5 sm:px-3 py-2 rounded-lg transition text-[11px] sm:text-xs font-semibold border border-white/30 whitespace-nowrap">
+          <i class="fas fa-lock mr-1"></i> Owner
+        </button>
+        <button id="adminLogoutBtn" class="admin-only bg-rose-500/90 hover:bg-rose-600 px-2.5 sm:px-3 py-2 rounded-lg transition text-[11px] sm:text-xs font-semibold whitespace-nowrap">
+          <i class="fas fa-sign-out-alt mr-1"></i> Logout
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="gradient-hero text-white py-8 sm:py-12 md:py-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute top-10 left-10 w-32 sm:w-40 h-32 sm:h-40 bg-cyan-300 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-40 sm:w-60 h-40 sm:h-60 bg-teal-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+
+        <!-- Left: Branding + CTA -->
+        <div class="text-center lg:text-left order-2 lg:order-1">
+          <p class="text-xs sm:text-sm md:text-base font-semibold tracking-wide text-cyan-100 mb-2 sm:mb-3 uppercase">
+            Where Preparation Meets Success
+          </p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight">
+            Current Affairs for UPSC
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg text-cyan-50 max-w-lg mx-auto lg:mx-0 mb-2 leading-relaxed">
+            Daily, Weekly, Monthly &amp; Yearly compilations in
+            <span class="font-semibold text-white">PDF</span>,
+            <span class="font-semibold text-white">Slides</span>,
+            <span class="font-semibold text-white">Video</span> &amp;
+            <span class="font-semibold text-white">Infographics</span>.
+          </p>
+          <p class="text-[11px] sm:text-xs text-cyan-100/80 mb-5 sm:mb-6">
+            <i class="fas fa-clock mr-1"></i> <span id="heroLastUpdated">Updated Regularly</span>
+          </p>
+          <div class="flex flex-col xs:flex-row flex-wrap justify-center lg:justify-start gap-2.5 sm:gap-3">
+            <a href="#content" class="inline-flex items-center justify-center gap-2 bg-white text-[#0B3A6E] font-bold px-5 sm:px-6 py-3 rounded-full shadow-xl hover:bg-[#E8F7F5] transition glow-btn text-sm sm:text-base">
+              Start Your Journey Today <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#social" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-5 py-3 rounded-full transition text-sm sm:text-base">
+              Connect With Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Intro Video -->
+        <div class="order-1 lg:order-2 flex justify-center px-1">
+          <div class="relative w-full max-w-[280px] xs:max-w-xs sm:max-w-sm md:max-w-md">
+            <div class="rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/30 bg-white/10 backdrop-blur-sm">
+              <video
+                id="heroVideo"
+                class="w-full h-auto block"
+                src="prep-rashan-video.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                webkit-playsinline
+                controls
+                preload="metadata"
+                poster="prep-rashan-logo.jpeg"
+                aria-label="Prep-Rashan Tutorial intro video"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="text-center text-[11px] sm:text-xs text-cyan-100/70 mt-2">
+              <i class="fas fa-play-circle mr-1"></i> Prep-Rashan Tutorial • Intro
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section id="content" class="py-8 sm:py-12 max-w-6xl mx-auto px-3 sm:px-4">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 mb-4">
+      <div>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold section-title">Current Affairs Library</h2>
+        <p class="text-slate-500 mt-1 text-xs sm:text-sm">Select period • Newest first</p>
+      </div>
+      <button id="addItemBtn" class="admin-only bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white px-4 py-2.5 rounded-xl text-sm font-semibold shadow-lg w-full sm:w-auto">
+        <i class="fas fa-plus mr-1"></i> Add New Item
+      </button>
+    </div>
+
+    <!-- Last Updated (always visible) -->
+    <div id="lastUpdatedBar" class="mb-5 flex flex-wrap items-center gap-2 text-sm bg-[#E8F7F5] border border-[#B8E5DF] rounded-xl px-4 py-3">
+      <i class="fas fa-clock text-[#0D9B8A]"></i>
+      <span class="font-semibold text-[#0B3A6E]">Last Updated:</span>
+      <span id="lastUpdatedDate" class="text-[#0B3A6E] font-medium">—</span>
+      <span class="text-slate-400 text-xs">(across all content)</span>
+    </div>
+
+    <!-- Period Toggle + Date Calendar -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
+      <div class="flex flex-wrap gap-2">
+        <button class="period-btn active px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border-2 border-[#0B3A6E] transition" data-period="daily">
+          <i class="fas fa-calendar-day mr-1.5"></i> Daily
+        </button>
+        <button class="period-btn px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border-2 border-slate-200 bg-white text-slate-700 transition" data-period="weekly">
+          <i class="fas fa-calendar-week mr-1.5"></i> Weekly
+        </button>
+        <button class="period-btn px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border-2 border-slate-200 bg-white text-slate-700 transition" data-period="monthly">
+          <i class="fas fa-calendar-alt mr-1.5"></i> Monthly
+        </button>
+        <button class="period-btn px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border-2 border-slate-200 bg-white text-slate-700 transition" data-period="yearly">
+          <i class="fas fa-calendar mr-1.5"></i> Yearly
+        </button>
+      </div>
+
+      <!-- Clickable Calendar Filter -->
+      <div class="flex flex-wrap items-center gap-2 bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm w-full sm:w-auto">
+        <label for="dateFilter" class="text-sm font-semibold text-slate-600 flex items-center gap-1.5 cursor-pointer">
+          <i class="fas fa-calendar-check text-[#0D9B8A]"></i> Pick a Date
+        </label>
+        <input type="date" id="dateFilter" class="border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none cursor-pointer">
+        <button id="clearDateFilter" class="text-xs text-slate-500 hover:text-[#0B3A6E] font-medium px-2 py-1 rounded hover:bg-slate-50 hidden">
+          Clear
+        </button>
+      </div>
+    </div>
+
+    <p id="dateFilterStatus" class="text-xs text-[#0B3A6E] font-medium mb-3 hidden"></p>
+
+    <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
+      <i class="fas fa-info-circle text-[#0D9B8A]"></i>
+      Non-members can view the list only. <strong>Download is restricted</strong> — take membership to get your unique access code for Full Access.
+    </p>
+
+    <!-- Items List (date-wise, newest first) -->
+    <div id="itemsContainer" class="space-y-6">
+      <!-- Filled by JS -->
+    </div>
+
+    <div id="emptyState" class="hidden text-center py-16 text-slate-400">
+      <i class="fas fa-folder-open text-5xl mb-4 text-[#14B8A6]"></i>
+      <p class="text-lg" id="emptyStateMsg">No content available for this period yet.</p>
+      <p class="text-sm mt-1">Owner can add new items after login.</p>
+    </div>
+  </section>
+
+  <!-- Social Links + QR Section -->
+  <section id="social" class="py-10 sm:py-14 bg-gradient-to-b from-white to-[#E8F7F5] border-t border-[#B8E5DF]">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-center section-title mb-2">Connect With Us</h2>
+      <p class="text-center text-slate-500 mb-10">Follow for daily updates &amp; important announcements</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Instagram -->
+        <div class="bg-white rounded-2xl p-6 text-center card-hover border border-pink-100 shadow-md">
+          <div class="w-14 h-14 mx-auto bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Instagram</h3>
+          <p class="text-xs text-slate-500 mb-4">Daily bites &amp; visual updates</p>
+          <a id="igLink" href="https://www.instagram.com/prep_rashan/" target="_blank" rel="noopener"
+             class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition mb-4">
+            Visit Profile
+          </a>
+          <div class="flex justify-center">
+            <img id="igQR" class="qr-img rounded-xl shadow border-2 border-pink-100" alt="Instagram QR"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://www.instagram.com/prep_rashan/">
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Scan to open</p>
+        </div>
+
+        <!-- YouTube -->
+        <div class="bg-white rounded-2xl p-6 text-center card-hover border border-red-100 shadow-md">
+          <div class="w-14 h-14 mx-auto bg-red-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">YouTube</h3>
+          <p class="text-xs text-slate-500 mb-4">In-depth videos &amp; discussions</p>
+          <a id="ytLink" href="https://www.youtube.com/channel/UCSIYewCD5ru2dFNBJ373IPQ" target="_blank" rel="noopener"
+             class="inline-block bg-red-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition mb-4">
+            Visit Channel
+          </a>
+          <div class="flex justify-center">
+            <img id="ytQR" class="qr-img rounded-xl shadow border-2 border-red-100" alt="YouTube QR"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://www.youtube.com/channel/UCSIYewCD5ru2dFNBJ373IPQ">
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Scan to open</p>
+        </div>
+
+        <!-- Telegram -->
+        <div class="bg-white rounded-2xl p-6 text-center card-hover border border-sky-100 shadow-md">
+          <div class="w-14 h-14 mx-auto bg-sky-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+            <i class="fab fa-telegram-plane"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Telegram</h3>
+          <p class="text-xs text-slate-500 mb-4">Instant PDFs &amp; alerts</p>
+          <a id="tgLink" href="https://t.me/YOUR_CHANNEL" target="_blank" rel="noopener"
+             class="inline-block bg-sky-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-sky-600 transition mb-4">
+            Join Channel
+          </a>
+          <div class="flex justify-center">
+            <img id="tgQR" class="qr-img rounded-xl shadow border-2 border-sky-100" alt="Telegram QR"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://t.me/YOUR_CHANNEL">
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Scan to open</p>
+        </div>
+
+        <!-- Threads -->
+        <div class="bg-white rounded-2xl p-6 text-center card-hover border border-slate-200 shadow-md">
+          <div class="w-14 h-14 mx-auto bg-slate-900 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+            <i class="fab fa-threads"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Threads</h3>
+          <p class="text-xs text-slate-500 mb-4">Short updates &amp; discussions</p>
+          <a id="thLink" href="https://www.threads.com/@prep_rashan" target="_blank" rel="noopener"
+             class="inline-block bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition mb-4">
+            Visit Profile
+          </a>
+          <div class="flex justify-center">
+            <img id="thQR" class="qr-img rounded-xl shadow border-2 border-slate-200" alt="Threads QR"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://www.threads.com/@prep_rashan">
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Scan to open</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation / Membership (HIDDEN by default) -->
+  <section id="paymentSection" class="py-10 sm:py-14 bg-gradient-to-br from-[#E8F7F5] to-[#E0F5F8] border-t border-[#B8E5DF] hidden">
+    <div class="max-w-5xl mx-auto px-3 sm:px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold section-title mb-2">Membership Plans</h2>
+        <p class="text-slate-500">Get <strong class="text-[#0B3A6E]">Full Access</strong> to all PDFs, Slides, Videos &amp; Infographics</p>
+      </div>
+
+      <!-- Plans Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-10">
+        <!-- 1 Day -->
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-100 p-5 text-center card-hover relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-slate-300"></div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">1 Day</p>
+          <p class="text-3xl font-extrabold text-slate-800 mb-0.5">₹10</p>
+          <p class="text-xs text-slate-400 mb-4">only</p>
+          <ul class="text-xs text-slate-600 space-y-1.5 mb-4 text-left">
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> Full Access for 1 day</li>
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> All formats</li>
+          </ul>
+          <p class="text-[11px] text-slate-400">Quick revision</p>
+        </div>
+
+        <!-- 1 Month (Most Popular) -->
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-[#0D9B8A] p-5 text-center card-hover relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#E11D2E]"></div>
+          <span class="absolute top-2 right-2 bg-[#E11D2E] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">POPULAR</span>
+          <p class="text-xs font-semibold text-[#0D9B8A] uppercase tracking-wide mb-1">1 Month</p>
+          <p class="text-3xl font-extrabold text-[#0B3A6E] mb-0.5">₹49</p>
+          <p class="text-xs text-slate-400 mb-4">only</p>
+          <ul class="text-xs text-slate-600 space-y-1.5 mb-4 text-left">
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> Full Access 30 days</li>
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> All content formats</li>
+          </ul>
+          <p class="text-[11px] text-[#0D9B8A] font-medium">Best for regular use</p>
+        </div>
+
+        <!-- Quarterly (3 months) -->
+        <div class="bg-white rounded-2xl shadow-lg border border-sky-200 p-5 text-center card-hover relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-sky-500"></div>
+          <span class="absolute top-2 right-2 bg-sky-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">10% OFF</span>
+          <p class="text-xs font-semibold text-sky-700 uppercase tracking-wide mb-1">Quarterly</p>
+          <p class="text-3xl font-extrabold text-slate-800 mb-0.5">₹132</p>
+          <p class="text-xs text-slate-400 mb-1">only · 3 months</p>
+          <p class="text-[11px] text-sky-600 font-semibold mb-3">10% Off for first 25 members every month</p>
+          <ul class="text-xs text-slate-600 space-y-1.5 mb-4 text-left">
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> Full Access 3 months</li>
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> All content formats</li>
+          </ul>
+          <p class="text-[11px] text-sky-700 font-medium">Limited – first 25/month</p>
+        </div>
+
+        <!-- Half-yearly (6 months) -->
+        <div class="bg-white rounded-2xl shadow-lg border border-violet-200 p-5 text-center card-hover relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-violet-500"></div>
+          <span class="absolute top-2 right-2 bg-violet-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">15% OFF</span>
+          <p class="text-xs font-semibold text-violet-700 uppercase tracking-wide mb-1">Half-Yearly</p>
+          <p class="text-3xl font-extrabold text-slate-800 mb-0.5">₹249</p>
+          <p class="text-xs text-slate-400 mb-1">only · 6 months</p>
+          <p class="text-[11px] text-violet-600 font-semibold mb-3">15% Off for first 25 members every month</p>
+          <ul class="text-xs text-slate-600 space-y-1.5 mb-4 text-left">
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> Full Access 6 months</li>
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> All content formats</li>
+          </ul>
+          <p class="text-[11px] text-violet-700 font-medium">Limited – first 25/month</p>
+        </div>
+
+        <!-- Annual -->
+        <div class="bg-white rounded-2xl shadow-lg border border-amber-200 p-5 text-center card-hover relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-amber-400"></div>
+          <span class="absolute top-2 right-2 bg-amber-400 text-amber-900 text-[9px] font-bold px-1.5 py-0.5 rounded-full">25% OFF</span>
+          <p class="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">Annual</p>
+          <p class="text-3xl font-extrabold text-slate-800 mb-0.5">₹441</p>
+          <p class="text-xs text-slate-400 mb-1">only · 1 year</p>
+          <p class="text-[11px] text-amber-600 font-semibold mb-3">25% Off for first 25 members every month</p>
+          <ul class="text-xs text-slate-600 space-y-1.5 mb-4 text-left">
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> Full Access 1 year</li>
+            <li class="flex items-start gap-1.5"><i class="fas fa-check text-[#0D9B8A] mt-0.5"></i> Priority support</li>
+          </ul>
+          <p class="text-[11px] text-amber-700 font-medium">Limited – first 25/month</p>
+        </div>
+      </div>
+
+      <!-- Payment Box -->
+      <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 max-w-md mx-auto border border-[#B8E5DF] text-center">
+        <p class="font-semibold text-slate-700 mb-1">Pay via UPI</p>
+        <p id="upiIdDisplay" class="text-[#0B3A6E] font-mono text-lg mb-4">yourupi@upi</p>
+        <img id="upiQR" class="mx-auto qr-img rounded-xl shadow-md mb-3 border-2 border-[#B8E5DF]"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=yourupi@upi&pn=Prep-Rashan"
+             alt="UPI QR Code">
+        <p class="text-xs text-slate-400 mb-3">Scan with any UPI app to pay</p>
+        <p class="text-xs text-slate-500 bg-slate-50 rounded-lg px-3 py-2 mb-4">
+          After payment, complete verification below to get your unique access code automatically.
+        </p>
+        <button id="openRegisterBtn" type="button" class="w-full bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-3 rounded-xl font-semibold shadow-lg">
+          <i class="fas fa-shield-alt mr-2"></i> Get My Unique Access Code (OTP Verify)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Self Registration + OTP Modal -->
+  <div id="registerModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
+      <h3 class="text-xl font-bold text-[#0B3A6E] mb-1">Get Your Access Code</h3>
+      <p class="text-sm text-slate-500 mb-4">Verify mobile or email with OTP. A unique code will be generated automatically. Owner will be notified.</p>
+
+      <!-- Step 1: Details -->
+      <div id="regStep1">
+        <div class="space-y-3">
+          <div>
+            <label class="block text-sm font-semibold mb-1">Your Name</label>
+            <input type="text" id="regName" placeholder="Full name" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Plan</label>
+            <select id="regPlan" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm">
+              <option value="1day">1 Day — ₹10</option>
+              <option value="1month" selected>1 Month — ₹49</option>
+              <option value="quarterly">Quarterly (3 months) — ₹132</option>
+              <option value="halfyearly">Half-Yearly (6 months) — ₹249</option>
+              <option value="annual">Annual — ₹441</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Verify using</label>
+            <div class="flex gap-2 mb-2">
+              <button type="button" id="regModeMobile" class="flex-1 py-2 rounded-lg text-sm font-semibold border-2 border-[#0B3A6E] bg-[#0B3A6E] text-white">Mobile</button>
+              <button type="button" id="regModeEmail" class="flex-1 py-2 rounded-lg text-sm font-semibold border-2 border-slate-200 bg-white text-slate-700">Email</button>
+            </div>
+            <input type="tel" id="regMobile" placeholder="10-digit mobile number" maxlength="10" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+            <input type="email" id="regEmail" placeholder="your@email.com" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none hidden">
+          </div>
+        </div>
+        <p id="regStep1Error" class="text-red-500 text-sm mt-2 hidden"></p>
+        <div class="flex gap-3 mt-5">
+          <button id="regSendOtp" class="flex-1 bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Send OTP</button>
+          <button id="regCancel1" class="flex-1 bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Cancel</button>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-3 leading-relaxed">
+          <strong>Demo mode:</strong> Real SMS/Email OTP needs a server. For now OTP is shown on screen for testing. Structure is ready for real OTP API later.
+        </p>
+      </div>
+
+      <!-- Step 2: OTP -->
+      <div id="regStep2" class="hidden">
+        <p class="text-sm text-slate-600 mb-3">OTP sent to <span id="regTargetDisplay" class="font-semibold text-[#0B3A6E]"></span></p>
+        <div id="demoOtpBox" class="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-4 text-center">
+          <p class="text-xs text-amber-700 mb-1">Demo OTP (for testing)</p>
+          <p id="demoOtpValue" class="text-2xl font-bold tracking-widest text-amber-800">------</p>
+        </div>
+        <input type="text" id="regOtpInput" placeholder="Enter 6-digit OTP" maxlength="6" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm text-center tracking-widest focus:ring-2 focus:ring-[#0D9B8A] outline-none mb-2">
+        <p id="regStep2Error" class="text-red-500 text-sm mb-3 hidden"></p>
+        <div class="flex gap-3">
+          <button id="regVerifyOtp" class="flex-1 bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Verify &amp; Get Code</button>
+          <button id="regBack" class="flex-1 bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Back</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Success -->
+      <div id="regStep3" class="hidden text-center">
+        <div class="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 text-3xl mb-4">
+          <i class="fas fa-check"></i>
+        </div>
+        <h4 class="text-lg font-bold text-slate-800 mb-2">Verified Successfully!</h4>
+        <p class="text-sm text-slate-500 mb-3">Your unique access code is ready. Owner has been notified.</p>
+        <div class="bg-[#E8F7F5] border-2 border-[#0D9B8A] rounded-xl px-4 py-4 mb-4">
+          <p class="text-xs text-slate-500 mb-1">Your Unique Access Code</p>
+          <p id="regFinalCode" class="text-2xl font-extrabold tracking-wider text-[#0B3A6E]">PR-XXXXXX</p>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">Save this code. Use it under <strong>Member Access</strong> to download content.</p>
+        <button id="regDone" class="w-full bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Done — Unlock Downloads</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <section id="contact" class="py-10 sm:py-14 max-w-6xl mx-auto px-3 sm:px-4">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-center section-title mb-8">Contact Us</h2>
+    <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto text-center border border-[#B8E5DF]">
+      <div class="w-16 h-16 mx-auto bg-[#D0EFEB] rounded-full flex items-center justify-center text-[#0B3A6E] text-2xl mb-5">
+        <i class="fas fa-envelope-open-text"></i>
+      </div>
+      <p class="mb-3">
+        <a id="contactEmail" href="mailto:contact@prep-rashan.com" class="text-[#0B3A6E] font-medium hover:underline">contact@prep-rashan.com</a>
+      </p>
+      <p class="mb-1">
+        <a id="contactIg" href="https://www.instagram.com/prep_rashan/" target="_blank" class="text-pink-600 font-medium hover:underline">
+          <i class="fab fa-instagram mr-1"></i> @prep_rashan
+        </a>
+      </p>
+      <p class="text-sm text-slate-400 mt-6">We usually reply within 24–48 hours.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-8 sm:py-12">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+            <div class="logo-clean p-1.5">
+              <img src="prep-rashan-logo.jpeg" alt="Prep-Rashan Logo" class="h-11 w-auto object-contain">
+            </div>
+            <div>
+              <h3 class="text-white font-bold text-lg leading-tight">Prep-Rashan</h3>
+              <p class="text-sm text-slate-400">Prep-Rashan Tutorial • Empowering UPSC Aspirants</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 text-xl">
+          <a id="footerIg" href="https://www.instagram.com/prep_rashan/" target="_blank" class="hover:text-pink-400 transition" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a id="footerYt" href="https://www.youtube.com/channel/UCSIYewCD5ru2dFNBJ373IPQ" target="_blank" class="hover:text-red-400 transition" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a id="footerTg" href="https://t.me/YOUR_CHANNEL" target="_blank" class="hover:text-sky-400 transition" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a id="footerTh" href="https://www.threads.com/@prep_rashan" target="_blank" class="hover:text-white transition" title="Threads"><i class="fab fa-threads"></i></a>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 pt-6 text-xs sm:text-sm space-y-4">
+        <div class="flex flex-col items-center gap-3">
+          <div class="bg-white rounded-lg px-4 py-2">
+            <img src="copyright-logo.png" alt="Copyright Prep-Rashan Logo" class="h-9 sm:h-11 w-auto object-contain">
+          </div>
+          <p class="text-center">
+            <span class="text-white font-semibold">© <span id="year"></span> Prep-Rashan. All Rights Reserved.</span>
+          </p>
+        </div>
+        <p class="text-center text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <strong class="text-[#14B8A6]">Disclaimer:</strong> The content provided on this website (PDFs, slides, videos, infographics) is for educational purposes only and is intended to assist UPSC aspirants in their preparation. While every effort is made to ensure accuracy, Prep-Rashan does not guarantee completeness or absolute correctness of the information. Users are advised to cross-verify facts from official sources.
+        </p>
+        <p class="text-center text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <strong class="text-amber-400">Copyright Warning:</strong> All materials on this site, including the Prep-Rashan Logo, are protected by copyright. Unauthorized reproduction, distribution, or commercial use of any content without prior written permission from Prep-Rashan is strictly prohibited and may attract legal action under applicable copyright laws.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== MODALS ========== -->
+
+  <!-- Owner Login Modal -->
+  <div id="loginModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6">
+      <h3 class="text-xl font-bold text-[#0B3A6E] mb-2">Owner Login</h3>
+      <p class="text-sm text-slate-500 mb-4">Enter the owner password to edit content.</p>
+      <input type="password" id="ownerPassword" placeholder="Password" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 mb-3 focus:outline-none focus:ring-2 focus:ring-[#0D9B8A]">
+      <p id="loginError" class="text-red-500 text-sm mb-3 hidden">Incorrect password</p>
+      <div class="flex gap-3">
+        <button id="loginSubmit" class="flex-1 bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Login</button>
+        <button id="loginCancel" class="flex-1 bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Cancel</button>
+      </div>
+      <p class="text-xs text-slate-400 mt-4">Default password: <code class="bg-slate-100 px-1.5 py-0.5 rounded">prepowner2026</code></p>
+    </div>
+  </div>
+
+  <!-- Member Access Modal -->
+  <div id="memberModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6">
+      <h3 class="text-xl font-bold text-[#0B3A6E] mb-2">Member Access</h3>
+      <p class="text-sm text-slate-500 mb-4">Enter <strong>your unique</strong> access code (shared only with you after payment) to unlock downloads.</p>
+      <input type="text" id="memberCodeInput" placeholder="Your unique access code" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 mb-3 focus:outline-none focus:ring-2 focus:ring-[#0D9B8A]" autocomplete="off">
+      <p id="memberError" class="text-red-500 text-sm mb-3 hidden">Invalid access code</p>
+      <p id="memberWelcome" class="text-teal-700 text-sm mb-3 hidden font-medium"></p>
+      <div class="flex gap-3">
+        <button id="memberSubmit" class="flex-1 bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Unlock</button>
+        <button id="memberCancel" class="flex-1 bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Cancel</button>
+      </div>
+      <p class="text-xs text-slate-400 mt-4">Unique code · <strong>one device at a time</strong>. Session stays while this page is open; it ends when you close the page/tab or restart the device.</p>
+      <button id="memberLogoutBtn" class="hidden w-full mt-3 text-sm text-rose-600 hover:underline">Logout as Member</button>
+    </div>
+  </div>
+
+  <!-- Owner: Manage Members Modal -->
+  <div id="membersManageModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 max-h-[90vh] overflow-y-auto">
+      <h3 class="text-xl font-bold text-[#0B3A6E] mb-2">Manage Members</h3>
+      <p class="text-sm text-slate-500 mb-4">Create a unique access code for each member after they pay.</p>
+
+      <!-- Add new member -->
+      <div class="bg-slate-50 rounded-xl p-4 mb-5 border border-slate-200">
+        <p class="text-sm font-semibold text-slate-700 mb-2">Add New Member</p>
+        <div class="space-y-2">
+          <input type="text" id="newMemberName" placeholder="Member name (optional)" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+          <div class="flex gap-2">
+            <input type="text" id="newMemberCode" placeholder="Unique code (or leave blank to auto-generate)" class="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+            <button id="generateCodeBtn" type="button" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap">Auto</button>
+          </div>
+          <select id="newMemberPlan" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
+            <option value="1day">1 Day (₹10)</option>
+            <option value="1month" selected>1 Month (₹49)</option>
+            <option value="quarterly">Quarterly 3 months (₹132)</option>
+            <option value="halfyearly">Half-Yearly 6 months (₹249)</option>
+            <option value="annual">Annual (₹441)</option>
+          </select>
+          <button id="addMemberBtn" class="w-full bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2 rounded-lg text-sm font-semibold">Add Member</button>
+        </div>
+      </div>
+
+      <!-- Members list -->
+      <p class="text-sm font-semibold text-slate-700 mb-2">Active Members (<span id="memberCount">0</span>)</p>
+      <div id="membersList" class="space-y-2 max-h-60 overflow-y-auto mb-4">
+        <!-- Filled by JS -->
+      </div>
+
+      <button id="closeMembersManage" class="w-full bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Close</button>
+    </div>
+  </div>
+
+  <!-- Membership Required Modal (shown when non-member tries to open content) -->
+  <div id="restrictModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 text-center">
+      <div class="w-14 h-14 mx-auto bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-2xl mb-4">
+        <i class="fas fa-lock"></i>
+      </div>
+      <h3 class="text-xl font-bold text-slate-800 mb-2">Download Restricted</h3>
+      <p class="text-sm text-slate-500 mb-5">You can view the list of available content, but <strong>download is only for members</strong>.</p>
+      <p class="text-sm text-[#0B3A6E] font-medium mb-5">Take membership for Full Access (PDF, Slides, Video &amp; Infographics).</p>
+      <div class="flex flex-col gap-2">
+        <button id="restrictGotoMembership" class="w-full bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">View Membership Plans</button>
+        <button id="restrictMemberLogin" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 py-2.5 rounded-xl font-medium">I already have access code</button>
+        <button id="restrictClose" class="w-full text-sm text-slate-500 hover:text-slate-700 py-1">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add / Edit Item Modal -->
+  <div id="itemModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
+      <h3 id="itemModalTitle" class="text-xl font-bold text-[#0B3A6E] mb-4">Add New Item</h3>
+      <input type="hidden" id="editItemId">
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-semibold mb-1">Period</label>
+          <select id="itemPeriod" class="w-full border border-slate-300 rounded-xl px-3 py-2 focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1">Title / Label</label>
+          <input type="text" id="itemTitle" placeholder="e.g. 08 Sep 2026 or Week 36 or Sep 2026" class="w-full border border-slate-300 rounded-xl px-3 py-2 focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1">Date (for sorting – newest first)</label>
+          <input type="date" id="itemDate" class="w-full border border-slate-300 rounded-xl px-3 py-2 focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+        </div>
+        <hr class="border-slate-200">
+        <p class="text-sm font-semibold text-slate-600">Content Links (leave blank if not available)</p>
+        <div>
+          <label class="block text-sm mb-1"><i class="fas fa-file-pdf text-red-500 mr-1"></i> PDF URL</label>
+          <input type="url" id="itemPdf" placeholder="https://..." class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+        </div>
+        <div>
+          <label class="block text-sm mb-1"><i class="fas fa-file-powerpoint text-orange-500 mr-1"></i> Slides URL</label>
+          <input type="url" id="itemSlides" placeholder="https://..." class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+        </div>
+        <div>
+          <label class="block text-sm mb-1"><i class="fas fa-video text-blue-500 mr-1"></i> Video URL</label>
+          <input type="url" id="itemVideo" placeholder="https://..." class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+        </div>
+        <div>
+          <label class="block text-sm mb-1"><i class="fas fa-image text-emerald-500 mr-1"></i> Infographics URL</label>
+          <input type="url" id="itemInfo" placeholder="https://..." class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-[#0D9B8A] outline-none">
+        </div>
+      </div>
+      <div class="flex gap-3 mt-6">
+        <button id="saveItemBtn" class="flex-1 bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Save</button>
+        <button id="cancelItemBtn" class="flex-1 bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Settings Panel -->
+  <div id="adminPanel" class="admin-only fixed bottom-6 right-6 z-40">
+    <div class="bg-slate-900 text-white rounded-2xl shadow-2xl p-4 w-72 border border-teal-700/50 max-h-[80vh] overflow-y-auto">
+      <h4 class="font-semibold mb-3 text-sm text-[#14B8A6] flex items-center justify-between">
+        <span><i class="fas fa-cog mr-1"></i> Owner Controls</span>
+        <span id="ownerNotifBadge" class="hidden bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+      </h4>
+      <label class="flex items-center gap-2 text-sm mb-3 cursor-pointer">
+        <input type="checkbox" id="togglePayment" class="rounded accent-[#0D9B8A]">
+        Show Membership Plans
+      </label>
+      <button id="editSocialBtn" class="w-full bg-[#0B3A6E] hover:bg-[#0D4F8B] text-xs py-2 rounded-lg mb-2 font-medium">Edit Social Links</button>
+      <button id="editUpiBtn" class="w-full bg-[#0D9B8A] hover:bg-[#0B8576] text-xs py-2 rounded-lg mb-2 font-medium">Edit UPI Details</button>
+      <button id="manageMembersBtn" class="w-full bg-amber-600 hover:bg-amber-700 text-xs py-2 rounded-lg mb-2 font-medium">Manage Members</button>
+      <button id="viewNotifBtn" class="w-full bg-slate-700 hover:bg-slate-600 text-xs py-2 rounded-lg mb-2 font-medium">
+        <i class="fas fa-bell mr-1"></i> Notifications
+      </button>
+      <div id="ownerNotifPanel" class="hidden mt-2 border-t border-slate-700 pt-2">
+        <p class="text-xs text-teal-300 font-semibold mb-1">Member Intimations</p>
+        <div id="ownerNotifList" class="max-h-40 overflow-y-auto"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Social / UPI Modal -->
+  <div id="settingsModal" class="modal fixed inset-0 bg-black/60 z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6">
+      <h3 id="settingsTitle" class="text-xl font-bold text-[#0B3A6E] mb-4">Edit Settings</h3>
+      <div id="socialSettings" class="space-y-3 hidden">
+        <div>
+          <label class="block text-sm font-semibold mb-1">Instagram URL</label>
+          <input type="url" id="setIg" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1">YouTube URL</label>
+          <input type="url" id="setYt" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1">Telegram URL</label>
+          <input type="url" id="setTg" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1">Threads URL</label>
+          <input type="url" id="setTh" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1">Contact Email</label>
+          <input type="email" id="setEmail" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm">
+        </div>
+      </div>
+      <div id="upiSettings" class="space-y-3 hidden">
+        <div>
+          <label class="block text-sm font-semibold mb-1">UPI ID</label>
+          <input type="text" id="setUpi" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" placeholder="name@upi">
+        </div>
+      </div>
+      <div id="memberCodeSettings" class="space-y-3 hidden">
+        <div>
+          <label class="block text-sm font-semibold mb-1">Member Access Code</label>
+          <input type="text" id="setMemberCode" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" placeholder="e.g. PREP2026">
+          <p class="text-xs text-slate-400 mt-1">Share this code with members after they pay. Case-insensitive.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 mt-6">
+        <button id="saveSettingsBtn" class="flex-1 bg-[#0B3A6E] hover:bg-[#0D4F8B] text-white py-2.5 rounded-xl font-semibold">Save</button>
+        <button id="cancelSettingsBtn" class="flex-1 bg-slate-200 hover:bg-slate-300 py-2.5 rounded-xl font-medium">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ========== CONFIG ==========
+    const OWNER_PASSWORD = "prepowner2026";
+    // Member login uses sessionStorage → stays while page is open / on refresh,
+    // ends when tab is closed, browser closed, or device restarted.
+    let isMember = false;
+    let currentMemberCode = sessionStorage.getItem("prepRashanMemberCode") || "";
+    let currentMemberName = sessionStorage.getItem("prepRashanMemberName") || "";
+
+    function getDeviceId() {
+      let id = localStorage.getItem("prepRashanDeviceId");
+      if (!id) {
+        id = "dev_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 10);
+        localStorage.setItem("prepRashanDeviceId", id);
+      }
+      return id;
+    }
+    function claimDeviceSession(member) {
+      member.activeDeviceId = getDeviceId();
+      member.activeSessionAt = new Date().toISOString();
+      saveData();
+    }
+    function clearDeviceSession(member) {
+      if (!member) return;
+      member.activeDeviceId = "";
+      member.activeSessionAt = "";
+      saveData();
+    }
+    function isSessionAllowed(member) {
+      if (!member) return false;
+      if (!member.activeDeviceId) return true;
+      return member.activeDeviceId === getDeviceId();
+    }
+    function clearMemberLoginLocal() {
+      isMember = false;
+      currentMemberCode = "";
+      currentMemberName = "";
+      sessionStorage.removeItem("prepRashanMemberCode");
+      sessionStorage.removeItem("prepRashanMemberName");
+      localStorage.removeItem("prepRashanMemberCode");
+      localStorage.removeItem("prepRashanMemberName");
+    }
+    function endSessionOnPageClose() {
+      const code = sessionStorage.getItem("prepRashanMemberCode") || currentMemberCode;
+      if (!code) return;
+      try {
+        const raw = localStorage.getItem("prepRashanData_v2");
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        const m = (parsed.members || []).find(x => x.code && x.code.toUpperCase() === code.toUpperCase());
+        if (m && m.activeDeviceId === getDeviceId()) {
+          m.activeDeviceId = "";
+          m.activeSessionAt = "";
+          localStorage.setItem("prepRashanData_v2", JSON.stringify(parsed));
+        }
+      } catch (e) {}
+    }
+    window.addEventListener("pagehide", endSessionOnPageClose);
+    window.addEventListener("beforeunload", endSessionOnPageClose);
+
+    const DEFAULT_DATA = {
+      members: [], // { id, name, code, plan, mobile, email, createdAt, verifiedVia, activeDeviceId }
+      notifications: [], // owner intimations { id, message, time, read }
+      items: [
+        {
+          id: "d1",
+          period: "daily",
+          title: "08 Sep 2026",
+          date: "2026-09-08",
+          pdf: "",
+          slides: "",
+          video: "",
+          info: ""
+        },
+        {
+          id: "d2",
+          period: "daily",
+          title: "07 Sep 2026",
+          date: "2026-09-07",
+          pdf: "",
+          slides: "",
+          video: "",
+          info: ""
+        },
+        {
+          id: "w1",
+          period: "weekly",
+          title: "Week 36 (01–07 Sep 2026)",
+          date: "2026-09-07",
+          pdf: "",
+          slides: "",
+          video: "",
+          info: ""
+        },
+        {
+          id: "m1",
+          period: "monthly",
+          title: "August 2026",
+          date: "2026-08-31",
+          pdf: "",
+          slides: "",
+          video: "",
+          info: ""
+        },
+        {
+          id: "y1",
+          period: "yearly",
+          title: "Year 2025 Compilation",
+          date: "2025-12-31",
+          pdf: "",
+          slides: "",
+          video: "",
+          info: ""
+        }
+      ],
+      activePeriod: "daily",
+      social: {
+        instagram: "https://www.instagram.com/prep_rashan/",
+        youtube: "https://www.youtube.com/channel/UCSIYewCD5ru2dFNBJ373IPQ",
+        telegram: "https://t.me/YOUR_CHANNEL",
+        threads: "https://www.threads.com/@prep_rashan",
+        email: "contact@prep-rashan.com"
+      },
+      upi: "yourupi@upi",
+      showPayment: false
+    };
+
+    let data = loadData();
+    let isAdmin = false;
+
+    function loadData() {
+      try {
+        const saved = localStorage.getItem("prepRashanData_v2");
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (!parsed.social.threads) parsed.social.threads = DEFAULT_DATA.social.threads;
+          if (!parsed.members) parsed.members = [];
+          if (!parsed.notifications) parsed.notifications = [];
+          // migrate old single code if present
+          if (parsed.memberCode && parsed.members.length === 0) {
+            parsed.members.push({
+              id: "legacy",
+              name: "Legacy Member",
+              code: parsed.memberCode,
+              plan: "1month",
+              mobile: "",
+              email: "",
+              createdAt: new Date().toISOString().slice(0, 10),
+              verifiedVia: "manual"
+            });
+          }
+          return parsed;
+        }
+        return structuredClone(DEFAULT_DATA);
+      } catch {
+        return structuredClone(DEFAULT_DATA);
+      }
+    }
+
+    function checkMemberStatus() {
+      // Prefer sessionStorage (page-session login)
+      currentMemberCode = sessionStorage.getItem("prepRashanMemberCode") || "";
+      currentMemberName = sessionStorage.getItem("prepRashanMemberName") || "";
+      if (!currentMemberCode) {
+        isMember = false;
+        return;
+      }
+      const found = (data.members || []).find(m => m.code.toUpperCase() === currentMemberCode.toUpperCase());
+      if (found && isSessionAllowed(found)) {
+        isMember = true;
+        currentMemberName = found.name || "";
+        sessionStorage.setItem("prepRashanMemberName", currentMemberName);
+        if (!found.activeDeviceId) claimDeviceSession(found);
+      } else {
+        // Invalid code, or active on another device, or session ended
+        clearMemberLoginLocal();
+      }
+    }
+
+    function generateUniqueCode(seed) {
+      // Auto-generate unique code; optionally seed from mobile/email
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let suffix = "";
+      if (seed) {
+        // take last digits / hash-like from mobile or email
+        const clean = String(seed).replace(/[^a-zA-Z0-9]/g, "").toUpperCase();
+        suffix = clean.slice(-4);
+        while (suffix.length < 4) suffix += chars[Math.floor(Math.random() * chars.length)];
+      } else {
+        for (let i = 0; i < 4; i++) suffix += chars[Math.floor(Math.random() * chars.length)];
+      }
+      // add 2 random chars for uniqueness
+      suffix += chars[Math.floor(Math.random() * chars.length)] + chars[Math.floor(Math.random() * chars.length)];
+      let code = "PR-" + suffix;
+      if ((data.members || []).some(m => m.code === code)) return generateUniqueCode(seed + Math.random());
+      return code;
+    }
+
+    function notifyOwner(message) {
+      if (!data.notifications) data.notifications = [];
+      data.notifications.unshift({
+        id: "n_" + Date.now(),
+        message,
+        time: new Date().toLocaleString("en-IN"),
+        read: false
+      });
+      // keep last 50
+      if (data.notifications.length > 50) data.notifications = data.notifications.slice(0, 50);
+      saveData();
+      updateOwnerNotifBadge();
+    }
+
+    function updateOwnerNotifBadge() {
+      const badge = document.getElementById("ownerNotifBadge");
+      if (!badge) return;
+      const unread = (data.notifications || []).filter(n => !n.read).length;
+      if (unread > 0 && isAdmin) {
+        badge.textContent = unread;
+        badge.classList.remove("hidden");
+      } else {
+        badge.classList.add("hidden");
+      }
+    }
+
+    function renderOwnerNotifications() {
+      const box = document.getElementById("ownerNotifList");
+      if (!box) return;
+      const list = data.notifications || [];
+      if (list.length === 0) {
+        box.innerHTML = '<p class="text-xs text-slate-400 text-center py-2">No notifications yet</p>';
+        return;
+      }
+      box.innerHTML = list.slice(0, 15).map(n => `
+        <div class="text-xs border-b border-slate-700 py-2 ${n.read ? "opacity-60" : ""}">
+          <p class="text-slate-200">${n.message}</p>
+          <p class="text-slate-500 mt-0.5">${n.time}</p>
+        </div>
+      `).join("");
+      // mark all read when viewed
+      data.notifications.forEach(n => n.read = true);
+      saveData();
+      updateOwnerNotifBadge();
+    }
+
+    function renderMembersList() {
+      const list = document.getElementById("membersList");
+      const countEl = document.getElementById("memberCount");
+      if (!list) return;
+      const members = data.members || [];
+      countEl.textContent = members.length;
+      if (members.length === 0) {
+        list.innerHTML = '<p class="text-sm text-slate-400 text-center py-4">No members yet. Add one above.</p>';
+        return;
+      }
+      list.innerHTML = members.slice().reverse().map(m => {
+        const contact = m.mobile ? m.mobile : (m.email || "");
+        const via = m.verifiedVia ? ` · via ${m.verifiedVia}` : "";
+        const session = m.activeDeviceId
+          ? `<span class="text-emerald-600 text-[10px] font-semibold">● Active on a device</span>`
+          : `<span class="text-slate-400 text-[10px]">○ Not logged in</span>`;
+        return `
+        <div class="flex items-center justify-between gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm">
+          <div class="min-w-0">
+            <p class="font-semibold text-slate-800 truncate">${m.name || "Member"}</p>
+            <p class="text-xs text-slate-500"><code class="bg-slate-100 px-1 rounded">${m.code}</code> · ${m.plan}${via}</p>
+            ${contact ? `<p class="text-xs text-slate-400 truncate">${contact}</p>` : ""}
+            <p class="mt-0.5">${session}</p>
+          </div>
+          <div class="flex items-center gap-1 shrink-0">
+            ${m.activeDeviceId ? `<button class="force-logout-btn text-amber-600 hover:text-amber-800 px-1.5 text-xs" data-id="${m.id}" title="Force logout from device"><i class="fas fa-unlink"></i></button>` : ""}
+            <button class="delete-member-btn text-rose-500 hover:text-rose-700 px-2" data-id="${m.id}" title="Remove">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>`;
+      }).join("");
+      list.querySelectorAll(".delete-member-btn").forEach(btn => {
+        btn.onclick = () => {
+          if (confirm("Remove this member? Their code will stop working.")) {
+            data.members = data.members.filter(m => m.id !== btn.dataset.id);
+            saveData();
+            checkMemberStatus();
+            renderMembersList();
+            render();
+          }
+        };
+      });
+      list.querySelectorAll(".force-logout-btn").forEach(btn => {
+        btn.onclick = () => {
+          const m = data.members.find(x => x.id === btn.dataset.id);
+          if (m && confirm("Force logout this member from their current device? They can then login on a new device.")) {
+            clearDeviceSession(m);
+            // if this browser was that member, log them out locally too
+            if (currentMemberCode && currentMemberCode.toUpperCase() === m.code.toUpperCase()) {
+              clearMemberLoginLocal();
+            }
+            renderMembersList();
+            render();
+            alert("Session cleared. Member can now login on another device.");
+          }
+        };
+      });
+    }
+
+    function saveData() {
+      localStorage.setItem("prepRashanData_v2", JSON.stringify(data));
+    }
+
+    // ========== RENDER ==========
+    let selectedDateFilter = null; // YYYY-MM-DD or null
+
+    function getLastUpdatedDate() {
+      if (!data.items || data.items.length === 0) return null;
+      const dates = data.items.map(i => i.date).filter(Boolean);
+      if (dates.length === 0) return null;
+      dates.sort((a, b) => new Date(b) - new Date(a));
+      return dates[0];
+    }
+
+    function render() {
+      document.querySelectorAll(".period-btn").forEach(btn => {
+        if (btn.dataset.period === data.activePeriod) {
+          btn.classList.add("active");
+          btn.classList.remove("bg-white", "text-slate-700", "border-slate-200");
+        } else {
+          btn.classList.remove("active");
+          btn.classList.add("bg-white", "text-slate-700", "border-slate-200");
+        }
+      });
+
+      // Always show Last Updated (homepage + content section)
+      const lastDate = getLastUpdatedDate();
+      const lastEl = document.getElementById("lastUpdatedDate");
+      if (lastEl) {
+        lastEl.textContent = lastDate ? formatDate(lastDate) : "No content yet";
+      }
+      const heroLast = document.getElementById("heroLastUpdated");
+      if (heroLast) {
+        heroLast.textContent = lastDate ? ("Last Updated: " + formatDate(lastDate)) : "Updated Regularly";
+      }
+
+      renderItems();
+      applySocial();
+      applyPaymentVisibility();
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("togglePayment").checked = data.showPayment;
+    }
+
+    function renderItems() {
+      const container = document.getElementById("itemsContainer");
+      container.innerHTML = "";
+
+      let filtered = data.items
+        .filter(item => item.period === data.activePeriod)
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // Apply date filter if selected
+      const statusEl = document.getElementById("dateFilterStatus");
+      const clearBtn = document.getElementById("clearDateFilter");
+      if (selectedDateFilter) {
+        filtered = filtered.filter(item => item.date === selectedDateFilter);
+        statusEl.classList.remove("hidden");
+        statusEl.textContent = `Showing content for ${formatDate(selectedDateFilter)} (${filtered.length} item${filtered.length !== 1 ? "s" : ""})`;
+        clearBtn.classList.remove("hidden");
+      } else {
+        statusEl.classList.add("hidden");
+        clearBtn.classList.add("hidden");
+      }
+
+      if (filtered.length === 0) {
+        document.getElementById("emptyState").classList.remove("hidden");
+        const msg = document.getElementById("emptyStateMsg");
+        if (selectedDateFilter) {
+          msg.textContent = `No content available for ${formatDate(selectedDateFilter)} in this period.`;
+        } else {
+          msg.textContent = "No content available for this period yet.";
+        }
+        return;
+      }
+      document.getElementById("emptyState").classList.add("hidden");
+
+      filtered.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden";
+
+        let adminBtns = "";
+        if (isAdmin) {
+          adminBtns = `
+            <div class="flex gap-2">
+              <button class="edit-item-btn text-xs bg-amber-100 text-amber-700 px-2.5 py-1 rounded-lg hover:bg-amber-200" data-id="${item.id}">
+                <i class="fas fa-edit"></i> Edit
+              </button>
+              <button class="delete-item-btn text-xs bg-red-100 text-red-700 px-2.5 py-1 rounded-lg hover:bg-red-200" data-id="${item.id}">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          `;
+        }
+
+        const formats = [
+          { key: "pdf", label: "PDF", icon: "fa-file-pdf", color: "from-red-500 to-rose-600", bg: "bg-red-50", border: "border-red-100" },
+          { key: "slides", label: "Slides", icon: "fa-file-powerpoint", color: "from-orange-500 to-amber-500", bg: "bg-orange-50", border: "border-orange-100" },
+          { key: "video", label: "Video", icon: "fa-play-circle", color: "from-blue-500 to-indigo-600", bg: "bg-blue-50", border: "border-blue-100" },
+          { key: "info", label: "Infographics", icon: "fa-image", color: "from-emerald-500 to-teal-600", bg: "bg-emerald-50", border: "border-emerald-100" }
+        ];
+
+        let formatCards = formats.map(f => {
+          const url = item[f.key];
+          let actionHtml;
+          if (!url) {
+            actionHtml = `<span class="inline-block bg-slate-200 text-slate-500 text-xs font-medium px-4 py-1.5 rounded-full">Coming Soon</span>`;
+          } else if (isMember || isAdmin) {
+            // Members & Owner can open/download freely
+            actionHtml = `<a href="${url}" target="_blank" rel="noopener" class="inline-block bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition">
+                     Open / Download <i class="fas fa-download ml-1 text-[10px]"></i>
+                   </a>`;
+          } else {
+            // Non-members: view-only notice, download blocked
+            actionHtml = `<button type="button" class="restrict-btn inline-block bg-slate-400 hover:bg-slate-500 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition cursor-pointer" data-url="${url}">
+                     View Only <i class="fas fa-eye ml-1 text-[10px]"></i>
+                   </button>`;
+          }
+          return `
+            <div class="${f.bg} rounded-xl p-4 text-center border ${f.border}">
+              <div class="w-11 h-11 mx-auto bg-gradient-to-br ${f.color} rounded-xl flex items-center justify-center text-white text-lg mb-2 shadow">
+                <i class="fas ${f.icon}"></i>
+              </div>
+              <p class="font-semibold text-sm mb-2">${f.label}</p>
+              ${actionHtml}
+            </div>
+          `;
+        }).join("");
+
+        card.innerHTML = `
+          <div class="px-5 py-4 bg-gradient-to-r from-[#E8F7F5] to-[#E0F5F8] border-b border-[#B8E5DF] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h3 class="font-bold text-lg text-[#072A52]">${item.title}</h3>
+              <p class="text-xs text-slate-500 mt-0.5"><i class="far fa-calendar-alt mr-1"></i> ${formatDate(item.date)}</p>
+            </div>
+            ${adminBtns}
+          </div>
+          <div class="p-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            ${formatCards}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      if (isAdmin) {
+        document.querySelectorAll(".edit-item-btn").forEach(btn => {
+          btn.onclick = () => openEditItem(btn.dataset.id);
+        });
+        document.querySelectorAll(".delete-item-btn").forEach(btn => {
+          btn.onclick = () => {
+            if (confirm("Delete this item?")) {
+              data.items = data.items.filter(i => i.id !== btn.dataset.id);
+              saveData();
+              render();
+            }
+          };
+        });
+      }
+
+      // Non-member restrict buttons
+      document.querySelectorAll(".restrict-btn").forEach(btn => {
+        btn.onclick = () => {
+          document.getElementById("restrictModal").classList.add("active");
+        };
+      });
+
+      // Update member button text
+      const memberBtnText = document.getElementById("memberBtnText");
+      if (memberBtnText) {
+        memberBtnText.textContent = isMember ? "Member ✓" : "Member Access";
+      }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return "";
+      const d = new Date(dateStr + "T00:00:00");
+      return d.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+    }
+
+    function applySocial() {
+      const s = data.social;
+      document.getElementById("igLink").href = s.instagram;
+      document.getElementById("ytLink").href = s.youtube;
+      document.getElementById("tgLink").href = s.telegram;
+      document.getElementById("thLink").href = s.threads;
+      document.getElementById("contactEmail").href = "mailto:" + s.email;
+      document.getElementById("contactEmail").textContent = s.email;
+      document.getElementById("contactIg").href = s.instagram;
+      document.getElementById("footerIg").href = s.instagram;
+      document.getElementById("footerYt").href = s.youtube;
+      document.getElementById("footerTg").href = s.telegram;
+      document.getElementById("footerTh").href = s.threads;
+
+      document.getElementById("igQR").src = `https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=${encodeURIComponent(s.instagram)}`;
+      document.getElementById("ytQR").src = `https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=${encodeURIComponent(s.youtube)}`;
+      document.getElementById("tgQR").src = `https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=${encodeURIComponent(s.telegram)}`;
+      document.getElementById("thQR").src = `https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=${encodeURIComponent(s.threads)}`;
+
+      document.getElementById("upiIdDisplay").textContent = data.upi;
+      document.getElementById("upiQR").src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent("upi://pay?pa=" + data.upi + "&pn=Prep-Rashan")}`;
+    }
+
+    function applyPaymentVisibility() {
+      const sec = document.getElementById("paymentSection");
+      if (data.showPayment) sec.classList.remove("hidden");
+      else sec.classList.add("hidden");
+    }
+
+    // ========== PERIOD TOGGLE ==========
+    document.querySelectorAll(".period-btn").forEach(btn => {
+      btn.onclick = () => {
+        data.activePeriod = btn.dataset.period;
+        saveData();
+        render();
+      };
+    });
+
+    // ========== DATE CALENDAR FILTER ==========
+    document.getElementById("dateFilter").addEventListener("change", (e) => {
+      selectedDateFilter = e.target.value || null;
+      renderItems();
+    });
+    document.getElementById("clearDateFilter").onclick = () => {
+      selectedDateFilter = null;
+      document.getElementById("dateFilter").value = "";
+      renderItems();
+    };
+
+    // ========== ADMIN ==========
+    function setAdminMode(on) {
+      isAdmin = on;
+      document.body.classList.toggle("admin-mode", on);
+      render();
+      updateOwnerNotifBadge();
+    }
+
+    document.getElementById("adminLoginBtn").onclick = () => {
+      document.getElementById("loginModal").classList.add("active");
+      document.getElementById("ownerPassword").value = "";
+      document.getElementById("loginError").classList.add("hidden");
+    };
+    document.getElementById("loginCancel").onclick = () => document.getElementById("loginModal").classList.remove("active");
+    document.getElementById("loginSubmit").onclick = () => {
+      if (document.getElementById("ownerPassword").value === OWNER_PASSWORD) {
+        setAdminMode(true);
+        document.getElementById("loginModal").classList.remove("active");
+      } else {
+        document.getElementById("loginError").classList.remove("hidden");
+      }
+    };
+    document.getElementById("adminLogoutBtn").onclick = () => setAdminMode(false);
+
+    // Member Access (unique code per individual)
+    document.getElementById("memberLoginBtn").onclick = () => {
+      document.getElementById("memberModal").classList.add("active");
+      document.getElementById("memberCodeInput").value = "";
+      document.getElementById("memberError").classList.add("hidden");
+      document.getElementById("memberWelcome").classList.add("hidden");
+      const logoutBtn = document.getElementById("memberLogoutBtn");
+      if (isMember) {
+        logoutBtn.classList.remove("hidden");
+        const wel = document.getElementById("memberWelcome");
+        wel.textContent = currentMemberName ? `Logged in as ${currentMemberName}` : "You are logged in as a member.";
+        wel.classList.remove("hidden");
+      } else {
+        logoutBtn.classList.add("hidden");
+      }
+    };
+    document.getElementById("memberCancel").onclick = () => document.getElementById("memberModal").classList.remove("active");
+    document.getElementById("memberSubmit").onclick = () => {
+      const code = document.getElementById("memberCodeInput").value.trim();
+      const found = (data.members || []).find(m => m.code.toUpperCase() === code.toUpperCase());
+      document.getElementById("memberError").classList.add("hidden");
+      if (!found) {
+        document.getElementById("memberError").textContent = "Invalid access code";
+        document.getElementById("memberError").classList.remove("hidden");
+        document.getElementById("memberWelcome").classList.add("hidden");
+        return;
+      }
+      // Single-device rule: block if already active on another device
+      if (found.activeDeviceId && found.activeDeviceId !== getDeviceId()) {
+        document.getElementById("memberError").textContent = "This code is already in use on another device. Logout from that device first, or ask Owner to force-logout.";
+        document.getElementById("memberError").classList.remove("hidden");
+        document.getElementById("memberWelcome").classList.add("hidden");
+        return;
+      }
+      claimDeviceSession(found);
+      isMember = true;
+      currentMemberCode = found.code;
+      currentMemberName = found.name || "";
+      sessionStorage.setItem("prepRashanMemberCode", found.code);
+      sessionStorage.setItem("prepRashanMemberName", currentMemberName);
+      document.getElementById("memberModal").classList.remove("active");
+      render();
+      alert("Access unlocked" + (currentMemberName ? " for " + currentMemberName : "") + " on this device.\n\nSession stays active while this page is open. It ends when you close the page/tab or restart the device.\nOne code = one device at a time.");
+    };
+    document.getElementById("memberLogoutBtn").onclick = () => {
+      const found = (data.members || []).find(m => m.code.toUpperCase() === (currentMemberCode || "").toUpperCase());
+      if (found && found.activeDeviceId === getDeviceId()) {
+        clearDeviceSession(found);
+      }
+      clearMemberLoginLocal();
+      document.getElementById("memberModal").classList.remove("active");
+      render();
+    };
+
+    // Owner: Manage Members
+    document.getElementById("manageMembersBtn").onclick = () => {
+      document.getElementById("newMemberName").value = "";
+      document.getElementById("newMemberCode").value = "";
+      document.getElementById("newMemberPlan").value = "1month";
+      renderMembersList();
+      document.getElementById("membersManageModal").classList.add("active");
+    };
+    document.getElementById("closeMembersManage").onclick = () => document.getElementById("membersManageModal").classList.remove("active");
+    document.getElementById("generateCodeBtn").onclick = () => {
+      document.getElementById("newMemberCode").value = generateUniqueCode();
+    };
+    document.getElementById("addMemberBtn").onclick = () => {
+      let code = document.getElementById("newMemberCode").value.trim();
+      const name = document.getElementById("newMemberName").value.trim();
+      const plan = document.getElementById("newMemberPlan").value;
+      if (!code) code = generateUniqueCode();
+      // uniqueness check
+      if ((data.members || []).some(m => m.code.toUpperCase() === code.toUpperCase())) {
+        alert("This code already exists. Please use a different unique code.");
+        return;
+      }
+      if (!data.members) data.members = [];
+      data.members.push({
+        id: "m_" + Date.now(),
+        name: name || "Member",
+        code: code.toUpperCase(),
+        plan,
+        createdAt: new Date().toISOString().slice(0, 10)
+      });
+      saveData();
+      document.getElementById("newMemberName").value = "";
+      document.getElementById("newMemberCode").value = "";
+      renderMembersList();
+      alert("Member added!\n\nName: " + (name || "Member") + "\nCode: " + code.toUpperCase() + "\n\nShare this unique code only with this member.");
+    };
+
+    // Restrict modal actions
+    document.getElementById("restrictClose").onclick = () => document.getElementById("restrictModal").classList.remove("active");
+    document.getElementById("restrictMemberLogin").onclick = () => {
+      document.getElementById("restrictModal").classList.remove("active");
+      document.getElementById("memberLoginBtn").click();
+    };
+    document.getElementById("restrictGotoMembership").onclick = () => {
+      document.getElementById("restrictModal").classList.remove("active");
+      // Enable membership section temporarily so user can see plans, or just scroll if already visible
+      if (document.getElementById("paymentSection").classList.contains("hidden")) {
+        // Show a quick note - plans are controlled by owner; still scroll to contact
+        alert("Membership plans are managed by the owner. Please contact us or check back when plans are enabled.\n\nYou can still unlock with an Access Code if you already paid.");
+      } else {
+        document.getElementById("paymentSection").scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    // Add / Edit Item
+    document.getElementById("addItemBtn").onclick = () => {
+      document.getElementById("itemModalTitle").textContent = "Add New Item";
+      document.getElementById("editItemId").value = "";
+      document.getElementById("itemPeriod").value = data.activePeriod;
+      document.getElementById("itemTitle").value = "";
+      document.getElementById("itemDate").value = new Date().toISOString().slice(0, 10);
+      document.getElementById("itemPdf").value = "";
+      document.getElementById("itemSlides").value = "";
+      document.getElementById("itemVideo").value = "";
+      document.getElementById("itemInfo").value = "";
+      document.getElementById("itemModal").classList.add("active");
+    };
+
+    function openEditItem(id) {
+      const item = data.items.find(i => i.id === id);
+      if (!item) return;
+      document.getElementById("itemModalTitle").textContent = "Edit Item";
+      document.getElementById("editItemId").value = id;
+      document.getElementById("itemPeriod").value = item.period;
+      document.getElementById("itemTitle").value = item.title;
+      document.getElementById("itemDate").value = item.date;
+      document.getElementById("itemPdf").value = item.pdf || "";
+      document.getElementById("itemSlides").value = item.slides || "";
+      document.getElementById("itemVideo").value = item.video || "";
+      document.getElementById("itemInfo").value = item.info || "";
+      document.getElementById("itemModal").classList.add("active");
+    }
+
+    document.getElementById("cancelItemBtn").onclick = () => document.getElementById("itemModal").classList.remove("active");
+    document.getElementById("saveItemBtn").onclick = () => {
+      const title = document.getElementById("itemTitle").value.trim();
+      const date = document.getElementById("itemDate").value;
+      if (!title || !date) {
+        alert("Title and Date are required");
+        return;
+      }
+      const id = document.getElementById("editItemId").value || ("item_" + Date.now());
+      const existing = data.items.find(i => i.id === id);
+      const obj = {
+        id,
+        period: document.getElementById("itemPeriod").value,
+        title,
+        date,
+        pdf: document.getElementById("itemPdf").value.trim(),
+        slides: document.getElementById("itemSlides").value.trim(),
+        video: document.getElementById("itemVideo").value.trim(),
+        info: document.getElementById("itemInfo").value.trim()
+      };
+      if (existing) {
+        Object.assign(existing, obj);
+      } else {
+        data.items.push(obj);
+        data.activePeriod = obj.period;
+      }
+      saveData();
+      document.getElementById("itemModal").classList.remove("active");
+      render();
+    };
+
+    // Payment toggle
+    document.getElementById("togglePayment").onchange = (e) => {
+      data.showPayment = e.target.checked;
+      saveData();
+      applyPaymentVisibility();
+    };
+
+    // Settings
+    document.getElementById("editSocialBtn").onclick = () => {
+      document.getElementById("settingsTitle").textContent = "Edit Social Links & Email";
+      document.getElementById("socialSettings").classList.remove("hidden");
+      document.getElementById("upiSettings").classList.add("hidden");
+      const mcs = document.getElementById("memberCodeSettings");
+      if (mcs) mcs.classList.add("hidden");
+      document.getElementById("setIg").value = data.social.instagram;
+      document.getElementById("setYt").value = data.social.youtube;
+      document.getElementById("setTg").value = data.social.telegram;
+      document.getElementById("setTh").value = data.social.threads;
+      document.getElementById("setEmail").value = data.social.email;
+      document.getElementById("settingsModal").classList.add("active");
+    };
+    document.getElementById("editUpiBtn").onclick = () => {
+      document.getElementById("settingsTitle").textContent = "Edit UPI Details";
+      document.getElementById("socialSettings").classList.add("hidden");
+      document.getElementById("upiSettings").classList.remove("hidden");
+      const mcs = document.getElementById("memberCodeSettings");
+      if (mcs) mcs.classList.add("hidden");
+      document.getElementById("setUpi").value = data.upi;
+      document.getElementById("settingsModal").classList.add("active");
+    };
+    document.getElementById("cancelSettingsBtn").onclick = () => document.getElementById("settingsModal").classList.remove("active");
+    document.getElementById("saveSettingsBtn").onclick = () => {
+      if (!document.getElementById("socialSettings").classList.contains("hidden")) {
+        data.social.instagram = document.getElementById("setIg").value.trim() || data.social.instagram;
+        data.social.youtube = document.getElementById("setYt").value.trim() || data.social.youtube;
+        data.social.telegram = document.getElementById("setTg").value.trim() || data.social.telegram;
+        data.social.threads = document.getElementById("setTh").value.trim() || data.social.threads;
+        data.social.email = document.getElementById("setEmail").value.trim() || data.social.email;
+      } else if (!document.getElementById("upiSettings").classList.contains("hidden")) {
+        data.upi = document.getElementById("setUpi").value.trim() || data.upi;
+      }
+      saveData();
+      applySocial();
+      document.getElementById("settingsModal").classList.remove("active");
+    };
+
+    // ========== SELF REGISTRATION + OTP (Demo) ==========
+    let regMode = "mobile"; // mobile | email
+    let pendingOtp = null;
+    let pendingReg = null;
+
+    function showRegStep(step) {
+      document.getElementById("regStep1").classList.toggle("hidden", step !== 1);
+      document.getElementById("regStep2").classList.toggle("hidden", step !== 2);
+      document.getElementById("regStep3").classList.toggle("hidden", step !== 3);
+    }
+
+    document.getElementById("openRegisterBtn")?.addEventListener("click", () => {
+      showRegStep(1);
+      document.getElementById("regName").value = "";
+      document.getElementById("regMobile").value = "";
+      document.getElementById("regEmail").value = "";
+      document.getElementById("regOtpInput").value = "";
+      document.getElementById("regStep1Error").classList.add("hidden");
+      document.getElementById("regStep2Error").classList.add("hidden");
+      document.getElementById("registerModal").classList.add("active");
+    });
+
+    // Also allow opening register from restrict modal path if needed
+    const openRegFromAnywhere = () => {
+      const btn = document.getElementById("openRegisterBtn");
+      if (btn && !document.getElementById("paymentSection").classList.contains("hidden")) {
+        btn.click();
+      } else {
+        alert("Please enable Membership Plans (Owner) or contact us to register.");
+      }
+    };
+
+    document.getElementById("regCancel1").onclick = () => document.getElementById("registerModal").classList.remove("active");
+    document.getElementById("regBack").onclick = () => showRegStep(1);
+
+    document.getElementById("regModeMobile").onclick = () => {
+      regMode = "mobile";
+      document.getElementById("regModeMobile").className = "flex-1 py-2 rounded-lg text-sm font-semibold border-2 border-[#0B3A6E] bg-[#0B3A6E] text-white";
+      document.getElementById("regModeEmail").className = "flex-1 py-2 rounded-lg text-sm font-semibold border-2 border-slate-200 bg-white text-slate-700";
+      document.getElementById("regMobile").classList.remove("hidden");
+      document.getElementById("regEmail").classList.add("hidden");
+    };
+    document.getElementById("regModeEmail").onclick = () => {
+      regMode = "email";
+      document.getElementById("regModeEmail").className = "flex-1 py-2 rounded-lg text-sm font-semibold border-2 border-[#0B3A6E] bg-[#0B3A6E] text-white";
+      document.getElementById("regModeMobile").className = "flex-1 py-2 rounded-lg text-sm font-semibold border-2 border-slate-200 bg-white text-slate-700";
+      document.getElementById("regEmail").classList.remove("hidden");
+      document.getElementById("regMobile").classList.add("hidden");
+    };
+
+    document.getElementById("regSendOtp").onclick = () => {
+      const name = document.getElementById("regName").value.trim();
+      const plan = document.getElementById("regPlan").value;
+      const mobile = document.getElementById("regMobile").value.trim();
+      const email = document.getElementById("regEmail").value.trim();
+      const err = document.getElementById("regStep1Error");
+      err.classList.add("hidden");
+
+      if (!name) {
+        err.textContent = "Please enter your name.";
+        err.classList.remove("hidden");
+        return;
+      }
+      if (regMode === "mobile") {
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+          err.textContent = "Enter a valid 10-digit Indian mobile number.";
+          err.classList.remove("hidden");
+          return;
+        }
+        // prevent duplicate mobile
+        if ((data.members || []).some(m => m.mobile === mobile)) {
+          err.textContent = "This mobile is already registered. Use Member Access with your code.";
+          err.classList.remove("hidden");
+          return;
+        }
+      } else {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          err.textContent = "Enter a valid email address.";
+          err.classList.remove("hidden");
+          return;
+        }
+        if ((data.members || []).some(m => m.email && m.email.toLowerCase() === email.toLowerCase())) {
+          err.textContent = "This email is already registered. Use Member Access with your code.";
+          err.classList.remove("hidden");
+          return;
+        }
+      }
+
+      // Demo OTP (6 digit). In production: call SMS/Email OTP API here.
+      pendingOtp = String(Math.floor(100000 + Math.random() * 900000));
+      pendingReg = { name, plan, mobile: regMode === "mobile" ? mobile : "", email: regMode === "email" ? email : "", via: regMode };
+      document.getElementById("demoOtpValue").textContent = pendingOtp;
+      document.getElementById("regTargetDisplay").textContent = regMode === "mobile" ? mobile : email;
+      document.getElementById("regOtpInput").value = "";
+      document.getElementById("regStep2Error").classList.add("hidden");
+      showRegStep(2);
+    };
+
+    document.getElementById("regVerifyOtp").onclick = () => {
+      const entered = document.getElementById("regOtpInput").value.trim();
+      const err = document.getElementById("regStep2Error");
+      if (!pendingOtp || entered !== pendingOtp) {
+        err.textContent = "Invalid OTP. Please try again.";
+        err.classList.remove("hidden");
+        return;
+      }
+      // OTP verified — auto generate unique code from mobile/email
+      const seed = pendingReg.mobile || pendingReg.email;
+      const code = generateUniqueCode(seed);
+      if (!data.members) data.members = [];
+      const newMember = {
+        id: "m_" + Date.now(),
+        name: pendingReg.name,
+        code,
+        plan: pendingReg.plan,
+        mobile: pendingReg.mobile,
+        email: pendingReg.email,
+        createdAt: new Date().toISOString().slice(0, 10),
+        verifiedVia: pendingReg.via,
+        activeDeviceId: getDeviceId(),
+        activeSessionAt: new Date().toISOString()
+      };
+      data.members.push(newMember);
+      saveData();
+
+      // Intimation to owner
+      const contact = pendingReg.mobile || pendingReg.email;
+      notifyOwner(`New member verified: ${pendingReg.name} (${contact}) · Plan: ${pendingReg.plan} · Code: ${code}`);
+
+      // Auto-login this member on this device (session ends when page is closed)
+      isMember = true;
+      currentMemberCode = code;
+      currentMemberName = pendingReg.name;
+      sessionStorage.setItem("prepRashanMemberCode", code);
+      sessionStorage.setItem("prepRashanMemberName", pendingReg.name);
+
+      document.getElementById("regFinalCode").textContent = code;
+      pendingOtp = null;
+      showRegStep(3);
+      render();
+    };
+
+    document.getElementById("regDone").onclick = () => {
+      document.getElementById("registerModal").classList.remove("active");
+      render();
+    };
+
+    document.getElementById("viewNotifBtn")?.addEventListener("click", () => {
+      const panel = document.getElementById("ownerNotifPanel");
+      panel.classList.toggle("hidden");
+      if (!panel.classList.contains("hidden")) renderOwnerNotifications();
+    });
+
+    // Init
+    checkMemberStatus();
+    render();
+    updateOwnerNotifBadge();
+  </script>
+</body>
+</html>

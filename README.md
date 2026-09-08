@@ -2,13 +2,13 @@
 
 Official website for **Prep-Rashan** — Daily Current Affairs for UPSC aspirants.
 
-## Live website
+## Live site (GitHub Pages)
 
-After you enable GitHub Pages (steps below), open:
+After enabling Pages, the site will be available at:
 
-**https://preprashan-arch.github.io/prep-rashan/**
+`https://YOUR_USERNAME.github.io/prep-rashan/`
 
-## Repository files (required for Pages)
+## Files
 
 | File | Purpose |
 |------|---------|
@@ -16,34 +16,20 @@ After you enable GitHub Pages (steps below), open:
 | `prep-rashan-logo.jpeg` | Brand logo |
 | `copyright-logo.png` | Copyright logo |
 | `prep-rashan-video.mp4` | Intro video |
-| `.nojekyll` | Lets GitHub Pages serve static files correctly |
-| `README.md` | This file |
+| `.nojekyll` | Required for GitHub Pages static hosting |
 
-## How to finish setup (2 minutes)
+## Enable GitHub Pages
 
-### 1. Upload website files
-1. Open: https://github.com/preprashan-arch/prep-rashan
-2. Click **Add file** → **Upload files**
-3. Upload these files from the prepared package:
-   - `index.html`
-   - `prep-rashan-logo.jpeg`
-   - `copyright-logo.png`
-   - `prep-rashan-video.mp4`
-4. Click **Commit changes**
+1. Open this repository on GitHub  
+2. Go to **Settings → Pages**  
+3. Under **Source**, select **Deploy from a branch**  
+4. Branch: **main** (or **master**), folder: **/ (root)**  
+5. Click **Save**  
+6. Wait 1–2 minutes, then open the URL shown
 
-### 2. Enable GitHub Pages
-1. Open **Settings** → **Pages**
-2. **Source**: Deploy from a branch
-3. **Branch**: `main` → folder `/ (root)`
-4. Click **Save**
-5. Wait 1–2 minutes
+## Local preview
 
-### 3. Share your link
-Anyone can open:
-
-`https://preprashan-arch.github.io/prep-rashan/`
-
-Works on phone, tablet, iPad and laptop.
+Open `index.html` in any browser (Chrome, Safari, Edge, Firefox).
 
 ---
 
