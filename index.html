@@ -405,7 +405,7 @@
   </section>
 
   <!-- Donation / Membership (HIDDEN by default) -->
-  <section id="paymentSection" class="py-10 sm:py-14 bg-gradient-to-br from-[#E8F7F5] to-[#E0F5F8] border-t border-[#B8E5DF] hidden">
+  <section id="paymentSection" class="py-10 sm:py-14 bg-gradient-to-br from-[#E8F7F5] to-[#E0F5F8] border-t border-[#B8E5DF]">
     <div class="max-w-5xl mx-auto px-3 sm:px-4">
       <div class="text-center mb-10">
         <h2 class="text-2xl sm:text-3xl font-extrabold section-title mb-2">Membership Plans</h2>
@@ -971,7 +971,7 @@
         email: "contact@prep-rashan.com"
       },
       upi: "yourupi@upi",
-      showPayment: false
+      showPayment: true
     };
 
     let data = loadData();
@@ -985,6 +985,8 @@
           if (!parsed.social.threads) parsed.social.threads = DEFAULT_DATA.social.threads;
           if (!parsed.members) parsed.members = [];
           if (!parsed.notifications) parsed.notifications = [];
+          // Membership plans visible by default (owner can still hide via toggle)
+          if (typeof parsed.showPayment === "undefined") parsed.showPayment = true;
           // migrate old single code if present
           if (parsed.memberCode && parsed.members.length === 0) {
             parsed.members.push({
